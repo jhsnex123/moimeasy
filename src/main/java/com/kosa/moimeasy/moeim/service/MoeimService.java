@@ -7,7 +7,7 @@ import com.kosa.moimeasy.moeim.entity.Moeim;
 import com.kosa.moimeasy.moeim.repository.MoeimRepository;
 import com.kosa.moimeasy.user.entity.Role;
 import com.kosa.moimeasy.user.entity.User;
-import com.kosa.moimeasy.user.repository.RoleRepository;
+import com.kosa.moimeasy.security.repository.RoleRepository;
 import com.kosa.moimeasy.user.entity.User;
 import com.kosa.moimeasy.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class MoeimService {
                 .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
 
         // 2. Role 조회
-        Role adminRole = roleRepository.findById(1) // 관리자 역할 ID를 하드코딩 대신 설정 값으로 가져오는 것을 추천
+        Role adminRole = roleRepository.findById(1L) // 관리자 역할 ID를 하드코딩 대신 설정 값으로 가져오는 것을 추천
             .orElseThrow(() -> new IllegalArgumentException("관리자 역할을 찾을 수 없습니다."));
 
         // 3. 모임 생성
@@ -77,7 +77,7 @@ public class MoeimService {
         }
 
         // 5. 사용자 모임 ID 및 역할 업데이트
-        Role memberRole = roleRepository.findById(2) // 멤버 역할 ID를 설정
+        Role memberRole = roleRepository.findById(2L) // 멤버 역할 ID를 설정
             .orElseThrow(() -> new IllegalArgumentException("멤버 역할을 찾을 수 없습니다."));
         user.setMoeimId(moeim.getMoeimId());
         user.setRole(memberRole);

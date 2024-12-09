@@ -14,7 +14,7 @@ public class TokenResponseDTO {
     private String name;
     private String email;
     private String nickname;
-    private Integer roleId; // long으로 줘야하나?
+    private Long roleId; // long으로 줘야하나?
     private String accessToken;
     private String refreshToken;
 }

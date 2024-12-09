@@ -20,7 +20,7 @@ public class UserDTO {
     private String nickname;
     private LocalDateTime createAt;
     private Long moeimId;
-    private Integer roleId; // Role ID 추가
+    private Long roleId; // Role ID 추가
     private String roleName; // Role Name 추가
 
     public UserDTO(User user) {
@@ -34,6 +34,6 @@ public class UserDTO {
         this.moeimId = user.getMoeimId();
         this.roleId = user.getRole().getRoleId();
         this.roleName = user.getRole().getRoleName();
-        //this.role = user.getRole() != null ? user.getRole().getRoleName() : null;
+        //this.roleId = user.getRole() != null ? user.getRole().getRoleName() : null;
     }
 }
