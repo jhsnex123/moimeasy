@@ -54,7 +54,7 @@ watch(
 @media (min-width: 1490px) {
   /* md 브레이크포인트: 1490px 이상 */
   .sidebar.expanded {
-    flex: 0.5; /* 펼쳐진 상태 */
+    flex: 0.52; /* 펼쳐진 상태 */
   }
 }
 @media (min-width: 1600px) {

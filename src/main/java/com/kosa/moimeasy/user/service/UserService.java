@@ -93,6 +93,40 @@ public class UserService {
     }
 
 
+
+
+    public User updateUserProfileImage(Long userId, UserDTO request) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
+
+        // Role은 변경하지 않음
+        if (request.getUserName() != null) {
+            user.setUserName(request.getUserName());
+        }
+        if (request.getPassword() != null) {
+            user.setPassword(request.getPassword());
+        }
+        if (request.getProfileImage() != null) {
+            user.setProfileImage(request.getProfileImage());
+        }
+        if (request.getEmail() != null) {
+            user.setEmail(request.getEmail());
+        }
+        if (request.getPhone() != null) {
+            user.setPhone(request.getPhone());
+        }
+        if (request.getNickname() != null) {
+            user.setNickname(request.getNickname());
+        }
+        if (request.getMoeimId() != null) {
+            user.setMoeimId(request.getMoeimId());
+        }
+
+        return userRepository.save(user);
+    }
+
+
+
     public Optional<User> findById(Long userId) {
         return userRepository.findById(userId);
     }

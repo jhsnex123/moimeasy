@@ -33,11 +33,11 @@ public class SecurityConfig {
                         .configurationSource(request -> {
                             CorsConfiguration config = new CorsConfiguration();
 
-                            config.addAllowedOrigin("http://192.168.5.49:3000");
+                            config.addAllowedOrigin("http://localhost:3000");
                             //config.setAllowedOrigins(List.of("http://localhost:5137")); //Vue.js
 
                             config.addAllowedOrigin("*");
-                            config.setAllowedOrigins(List.of("http://192.168.5.49:3000")); //Vue.js
+                            config.setAllowedOrigins(List.of("http://localhost:3000")); //Vue.js
 
                             config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH" , "OPTIONS"));
                             config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Refresh-Token"));

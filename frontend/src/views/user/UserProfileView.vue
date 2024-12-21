@@ -90,12 +90,12 @@ export default {
   methods: {
     // 사용자 데이터를 API로 불러오는 메서드
     async loadUserData(userId) {
+      this.loginUser = JSON.parse(localStorage.getItem('user'));
+      this.loginUserName = JSON.parse(localStorage.getItem('user')).name;
       try {
         const response = await axios.get(`/api/v1/users/${userId}`);
         this.user = response.data; // 응답 데이터를 user에 저장
         this.src = await fetchImageUrl(response.data.profileImage); // 프로필 이미지 저장
-        this.loginUser = JSON.parse(localStorage.getItem('user'));
-        this.loginUserName = JSON.parse(localStorage.getItem('user')).name;
       } catch (error) {
         console.error('사용자 정보를 불러오는데 실패했습니다:', error);
       }

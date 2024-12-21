@@ -88,6 +88,14 @@ public class UserController {
     }
 
 
+
+    //프로필이미지 수정
+    @PutMapping("/update/{userId}")
+    public User updateProfileImageUser(@PathVariable Long userId, @RequestBody UserDTO request) {
+        System.out.println("전달된 데이터 "+userId+" 프로필: "+request.getProfileImage());
+        return userService.updateUserProfileImage(userId, request);
+    }
+
     // 닉네임 중복 검사
     @GetMapping("/check-editnickname")
     public ResponseEntity<?> checkNickname(@RequestParam("nickname") String nickname) {

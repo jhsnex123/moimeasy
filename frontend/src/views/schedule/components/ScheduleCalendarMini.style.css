@@ -1,0 +1,258 @@
+/* 스타일 정의 */
+:root {
+  --fc-today-bg-color: rgba(226, 225, 226, 0.3); /* 오늘 날짜 배경색 */
+  --fc-highlight-color: #e4f8f1;
+}
+.demo-app {
+  display: flex;
+  min-height: 100%;
+  font-family:
+    Arial,
+    Helvetica Neue,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+}
+
+.demo-app-sidebar {
+  width: 200px;
+  line-height: 1.5;
+  background: #f9f1ff;
+  border-right: 1px solid #d3e2e8;
+}
+
+.demo-app-sidebar-section {
+  padding: 2em;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 2em;
+}
+
+.fc {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 헤더 툴바 */
+.fc-header-toolbar {
+}
+/* 헤더 좌측  */
+.fc-toolbar-chunk:nth-of-type(1) {
+  .fc-button {
+    border: 1px solid #e9e9e9 !important;
+    color: #787a7b !important; /* 텍스트 색상 */
+  }
+}
+/* 헤더 중앙 */
+.fc-toolbar-chunk:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 헤더 우측  */
+.fc-toolbar-chunk:nth-of-type(3) {
+  /*버튼 커스텀 */
+  .fc-button {
+    background-color: #fafbfd !important;
+    color: #787a7b !important; /* 텍스트 색상 */
+    cursor: pointer;
+  }
+  .fc-button:nth-of-type(1) {
+    border: 1px solid #d4d4d4 !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .fc-button:nth-of-type(2) {
+    border: 1px solid #d4d4d4 !important;
+  }
+  .fc-button:nth-of-type(3) {
+    border: 1px solid #d4d4d4 !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .fc-button:hover {
+    background-color: #f0ecfb !important;
+  }
+  .fc-button:focus {
+    background-color: #735bf3 !important;
+    color: #ffff !important;
+    border: 1px solid #735bf3 !important;
+  }
+}
+
+/* 헤더 버튼 */
+.fc-button {
+  background-color: #ffffff !important;
+  border: none !important;
+  color: #000000 !important; /* 텍스트 색상 */
+  cursor: pointer;
+}
+.fc-button:hover {
+  background-color: #f1f4f9 !important;
+}
+.fc-button:focus {
+  box-shadow: none !important;
+}
+
+/* 테이블 헤더 셀 */
+.fc-col-header-cell {
+  height: 30px;
+  background: #f2eefb;
+  border: none !important;
+}
+
+.fc-col-header-cell:nth-of-type(1) {
+  border-top-left-radius: 10px;
+}
+.fc-col-header-cell:nth-of-type(7) {
+  border-top-right-radius: 10px;
+}
+
+.fc-col-header-cell > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-weight: 500;
+}
+/* 날짜 패딩효과 */
+.fc-daygrid-day-number {
+  padding: 10px !important;
+}
+.fc-theme-standard .fc-scrollgrid {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* 기본 이벤트 스타일 */
+.fc-event {
+  background-color: #ebe2fd;
+  color: #7551e9;
+  font-weight: 600;
+  border-left: 4px solid #7551e9;
+  border-radius: 0px;
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/*올 데이 이벤트 */
+.fc-h-event {
+  border: none;
+  background-color: #e4f8f1;
+  border-left: 4px solid #74cdab !important;
+  i {
+    color: #74cdab;
+    font-weight: 600;
+  }
+}
+
+/* 중요 이벤트 */
+.important-event {
+  background-color: #ebe2fd;
+  border-color: #7551e9 !important;
+  i {
+    color: #7551e9 !important;
+  }
+}
+/* 공휴일 이벤트 */
+.holiday-event {
+  background-color: #fff4e7;
+  border: none;
+  border-left: 4px solid #ffb85c !important;
+  i {
+    color: #ffb85c;
+  }
+}
+.custom-event1 {
+  background-color: #ffe2e6;
+  border: none;
+  border-left: 4px solid #fd7385 !important;
+  i {
+    color: #fd7385 !important;
+  }
+  b {
+    color: #fd7385 !important;
+  }
+}
+.custom-event2 {
+  background-color: #dbf1f7;
+  border: none;
+  border-left: 4px solid #289ebd !important;
+  i {
+    color: #289ebd !important;
+  }
+  b {
+    color: #289ebd !important;
+  }
+}
+
+/* 다이얼로그 커스텀 */
+.fc-direction-ltr {
+  margin: 0 !important;
+}
+
+.add-dialog-subtitle {
+  color: 18px;
+}
+.add-dialog-inputbox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-dialog-inputbox-label {
+  font-weight: bold;
+}
+.add-dialog-input {
+  flex: 1 1 auto;
+}
+
+.add-dialog-inputbox {
+  display: flex;
+  flex-direction: column;
+  height: auto!;
+}
+
+.float-label-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .float-label-container {
+    width: 14rem;
+  }
+}
+.select-style {
+  width: 100%;
+}
+
+.p-select-option:nth-child(1) {
+  &:hover {
+    background-color: #ffe2e6 !important;
+  }
+}
+.p-select-option:nth-child(2) {
+  &:hover {
+    background-color: #fff4e7 !important;
+  }
+}
+.p-select-option:nth-child(3) {
+  &:hover {
+    background-color: #ebe2fd !important;
+  }
+}
+.p-select-option:nth-child(4) {
+  &:hover {
+    background-color: #e4f8f1 !important;
+  }
+}
+.p-select-option:nth-child(5) {
+  &:hover {
+    background-color: #dbf1f7 !important;
+  }
+}

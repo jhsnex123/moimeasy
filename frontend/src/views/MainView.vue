@@ -6,7 +6,7 @@
         <UserProfile />
       </div>
       <div class="calendar-section scrollable wide">
-        <ScheduleCalendar />
+        <ScheduleCalendarMini />
       </div>
       <div class="chat-section scrollable narrow">
         <ChatLayoutView />
@@ -31,7 +31,7 @@
 <script>
 import UserProfile from '@/views/user/UserProfileView.vue';
 import BoardView from '@/views/board/BoardView.vue';
-import ScheduleCalendar from '@/views/schedule/ScheduleView.vue';
+import ScheduleCalendarMini from '@/views/schedule/components/ScheduleCalendarMini.vue';
 import SettlementView from '@/views/moeim/SettlementView.vue';
 import ChatLayoutView from '@/views/chat/ChatRoomListView.vue';
 import Category from '@/views/transaction/Category.vue';
@@ -42,7 +42,7 @@ export default {
   components: {
     UserProfile,
     BoardView,
-    ScheduleCalendar,
+    ScheduleCalendarMini,
     SettlementView,
     ChatLayoutView,
     Category,

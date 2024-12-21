@@ -32,7 +32,7 @@ import ThemeSwitcher from './components/ThemeSwitcher.vue';
 import Dialog from 'primevue/dialog';
 
 // axios 기본 설정 (Spring Boot 백엔드가 8088 포트라 가정)
-axios.defaults.baseURL = 'http://192.168.5.49:8088'; // 서버 URL 설정
+axios.defaults.baseURL = 'http://localhost:8088'; // 서버 URL 설정
 
 // 중앙집중식 Axios 인스턴스 임포트
 import api from './axios';

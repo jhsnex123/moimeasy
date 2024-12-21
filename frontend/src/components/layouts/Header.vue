@@ -57,6 +57,13 @@
             height="32px"
             @click="toggle"
           />
+          <!-- <Avatar
+            :image="profileImage ? profileImage : defaultAvatar"
+            class="mr-2"
+            size="large"
+            shape="circle"
+            @click="toggle"
+          /> -->
           <p>{{ nickName }}</p>
           <!-- 프로필이미지 클릭시 드롭다운 메뉴 -->
           <div class="tiered-menu-box">
@@ -148,7 +155,13 @@ watch(
   () => route.matched,
   async () => {
     updatePathInfo();
-    fetchNotification(); //알림 정보 가져오기
+    if (
+      userData.value != '' &&
+      userData.value != null &&
+      userData.value != undefined
+    ) {
+      fetchNotification();
+    } //알림 정보 가져오기
     console.log('라우트 변경됨:', items.value);
     // 유저 정보가져오기
     const userDataStorage = localStorage.getItem('user');

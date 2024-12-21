@@ -24,7 +24,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
 public void registerStompEndpoints(StompEndpointRegistry registry) {
     registry.addEndpoint("/stomp")
-            .setAllowedOrigins("http://192.168.5.49:3000") // Vue 개발 서버 허용
+            .setAllowedOrigins("http://localhost:3000") // Vue 개발 서버 허용
             .setHandshakeHandler(new DefaultHandshakeHandler() {
                 @Override
                 protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {

@@ -26,13 +26,13 @@ export default defineConfig({
     port: 3000, // 개발 서버 포트 설정
     proxy: {
       '/api/v1': {
-        target: 'http://192.168.5.49:8088', // Spring Boot 서버 주소
+        target: 'http://localhost:8088', // Spring Boot 서버 주소
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/v1/, '/api/v1'), // 경로 재작성
       },
       '/ws-connect': {
         // WebSocket 프록시 경로 설정
-        target: 'http://192.168.5.49:8088', // Spring Boot WebSocket 서버 주소와 포트
+        target: 'http://localhost:8088', // Spring Boot WebSocket 서버 주소와 포트
         ws: true, // WebSocket 지원 설정
         changeOrigin: true, // 동일한 오리진 정책 회피
         secure: false,
